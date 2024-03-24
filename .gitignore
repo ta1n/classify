@@ -1,0 +1,9 @@
+__pycache__/
+*$py.class
+
+*.so
+
+
+pretrained_models/
+data/
+
