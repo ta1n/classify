@@ -3,7 +3,11 @@ __pycache__/
 
 *.so
 
+*.pth
 
 pretrained_models/
 data/
+ui/
+notebooks/
+
 
