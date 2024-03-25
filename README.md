@@ -43,5 +43,5 @@ Click -> choose file
 See output:
 Click -> classify
 
-![](media/output.jpg)
 
+![](media/output.jpg)
