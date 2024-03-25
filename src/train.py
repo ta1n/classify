@@ -4,7 +4,6 @@ import torch.optim as optim
 
 from model import *
 
-
 def train_model(data_loaders, num_epochs, device):
     model = CarBikeClassifier(num_classes=2).to(device)
     criterion = nn.CrossEntropyLoss()

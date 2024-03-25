@@ -7,15 +7,6 @@ from torchvision.datasets import ImageFolder
 from PIL import Image
 
 
-# dataDir='../data/'
-#
-# car=dataDir+ "test/Car/Car (1100).jpeg"
-#
-# image = Image.open(car)
-# print(image.size)
-# image.show()
-
-
 class DataPreprocessor:
     def __init__(self, data_dir, batch_size, image_size):
         self.data_dir = data_dir
@@ -55,5 +46,4 @@ class DataPreprocessor:
             'test': DataLoader(image_datasets['test'], batch_size=self.batch_size, shuffle=False)
         }
         return data_loaders
-
 
