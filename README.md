@@ -1,6 +1,6 @@
 # Simple Car vs Bike classifier
 
-This is a simple image classifier using pytorch.
+This is a simple Car Vs Bike image classifier using pytorch.
 
 
 # Usage
@@ -10,7 +10,7 @@ Dataset:
 [Car Vs Bike  Dataset](https://www.kaggle.com/datasets/utkarshsaxenadn/car-vs-bike-classification-dataset)
 
     - Create "data" directory
-    - Create train, evaluation and test directory
+    - Create train, evaluation and test directories
     - Inside each of 3 directories, create 2 directories named "Bike" and "Car"
     - Split all of Car and Bike images into 3 directories collected from the dataset(only the jpeg images)
 
@@ -42,5 +42,5 @@ Click -> choose file
 See output:
 Click -> classify
 
-![[output.jpg]]
+![](output.jpg)
 
