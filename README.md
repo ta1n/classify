@@ -21,9 +21,10 @@ pip install torch torchvision customtkinter
 ```
 
 ## Run main.py and train the model:
+### Change directory to src/
 
 ```python
-python src/main.py
+python main.py
 ```
 It'll take some time to complete the training.
 
@@ -42,5 +43,5 @@ Click -> choose file
 See output:
 Click -> classify
 
-![](output.jpg)
+![](media/output.jpg)
 

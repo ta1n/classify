@@ -22,7 +22,7 @@ def selectfile():
 
 def classify():
     model = CarBikeClassifier(num_classes=2)
-    model.load_state_dict(torch.load('model.pth', map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('../pretrained_models/model.pth', map_location=torch.device('cpu')))
     print(image_file)
     prediction_text=predict_image(model, image_file, device='cpu')
 

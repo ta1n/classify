@@ -3,11 +3,6 @@ __pycache__/
 
 *.so
 
-*.pth
-
-pretrained_models/
-data/
+Bike*
+Car*
 ui/
-notebooks/
-
-
