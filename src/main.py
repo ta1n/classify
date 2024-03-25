@@ -21,6 +21,6 @@ def main():
     model = train_model(data_loaders, num_epochs, device)
     print("----------Training Completed----------------")
     evaluate_model(model, data_loaders['test'], device)
-    torch.save(model.state_dict(), 'model.pth')
+    torch.save(model.state_dict(), '../pretrained_models/model.pth')
 if __name__ == "__main__":
     main()
