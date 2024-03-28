@@ -6,7 +6,7 @@ from predict import *
 app = CTk()
 app.geometry("900x700")
 
-image_file = '../data/test/Bike/Bike (1070).jpeg'
+#image_file = '../data/test/Bike/Bike (1070).jpeg'
 
 def selectfile():
     filename=filedialog.askopenfilename()
@@ -24,10 +24,16 @@ def classify():
     model = CarBikeClassifier(num_classes=2)
     model.load_state_dict(torch.load('../pretrained_models/model.pth', map_location=torch.device('cpu')))
     print(image_file)
-    prediction_text=predict_image(model, image_file, device='cpu')
+    prediction_result=predict_image(model, image_file, device='cpu')
+    prediction_text=prediction_result[0]
+    if(prediction_text=='bike'):
+        prediction_text=f"I am {prediction_result[1]}% sure: It's a Bike !"
+    else:
+        prediction_text=f"I am {prediction_result[2]}% sure: It's a Car ! "
 
     frame=CTkFrame(master=app,fg_color="transparent",border_color="white",border_width=2)
     frame.place(relx = 0.5, rely = 0.1,anchor="center")
+    txt=CTkLabel(master=frame,text="",font=("Roboto",40),pady=5,padx=5)
     txt=CTkLabel(master=frame,text=prediction_text,font=("Roboto",40),pady=5,padx=5)
     txt.pack(anchor="s",expand=True,pady=3,padx=3)
 
